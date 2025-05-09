@@ -18,7 +18,7 @@ pipeline {
       }
     }
 
-    tage("Push") {
+    stage("Push") {
       steps {
         withCredentials([usernamePassword(credentialsId: "my-jenkins-github-token", usernameVariable: "GITHUB_USERNAME", passwordVariable: "GITHUB_PERSONAL_ACCESS_TOKEN")]) {
           sh """
